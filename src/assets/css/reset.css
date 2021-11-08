@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "pingfang";
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #666;
+}
+ul {
+  list-style-type: none;
+  /* display: block; */
+  padding: 0;
+  margin: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0rem;
+  -webkit-margin-end: 0rem;
+  -webkit-padding-start: 0rem;
+}
+.text-center {
+  text-align: center;
+}
+/* 单行文本省略 */
+.hidden1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 多行文本溢出 */
+.hidden3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.hidden2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
