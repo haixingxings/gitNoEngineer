@@ -104,10 +104,10 @@ componentWillReceiveProps (nextProps) {
   render() {
     const {loading,dataList} = this.state;
     return (
-      <div className='content'>
+      <div className='content' style={{marginTop:'50px'}}>
         {loading?(
           <div className='loading'></div>
-        ):(
+        ):null}
           <div>
             <ul className='content-list'>
            { dataList.map((item,index) =>{
@@ -167,7 +167,6 @@ componentWillReceiveProps (nextProps) {
             })}
             </ul>
           </div>
-        )}
         {/* <img scr='../assets/img/loading.gif'/> */}
       </div>
     );

@@ -28,7 +28,7 @@ class Header extends React.Component {
         <li key={item.id} className={tabStyle} onClick={()=>{this.tabChoice(item.id)}}>{item.tabName}</li>
       );
     })
-    return <ul style={{textAlign:'center'}} className='header-nav'>
+    return <ul style={{textAlign:'center',height:'60px',lineHeight:'60px',position:'fixed',top:0,left:0,background:'#fff',width:'100%'}} className='header-nav'>
         {tabList}
     </ul>;
   }
