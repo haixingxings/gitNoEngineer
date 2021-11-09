@@ -82,6 +82,7 @@ componentWillReceiveProps (nextProps) {
             if(isChange){
               this.setState({
                 loading:false,
+                showMore:true,
                 dataList:data
               })
             }else{
