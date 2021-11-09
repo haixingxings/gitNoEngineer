@@ -2,7 +2,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      currentIndex:1
+      currentIndex:'All'
     }
   }
   _callBack=(name, value)=>{
