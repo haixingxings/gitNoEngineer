@@ -14,55 +14,19 @@ class Content extends React.Component {
   }
   
   componentDidMount() {
-    console.log('初始化')
     let search = window.location.hash.slice(15) || 'All';
-    console.log('search1111',search);
     this.getData(search,1);
-    // this.getData(this.state.currentIndex,1);
-    // let debouncetest =  this.debounce(this.fnn,1000)
-  // window.addEventListener('scroll', debouncetest)}
-//  fnn=()=>{
-//     // 网页滚动高度 
-//     var scrollTopHeight = document.body.scrollTop || document.documentElement.scrollTop
-//     // 文档显示区域的高度
-//     var showHeight = window.innerHeight
-//     // 所有内容的高度
-//     var allHeight = document.body.scrollHeight
-//     // 只需要判断内容盒子的高度+滚动条的scrollTop = 盒子内容的高度即为触底
-//     if (allHeight - 66 < scrollTopHeight + showHeight) {
-//         console.log("触底了:",)
-//         this.setState({
-//           page:this.state.page+1
-//         },()=>{
-//           this.getData(this.state.currentIndex,this.state.page)
-//         })
-//     }
-//  }
 }
-// 防抖
-// debounce=(fn,delay) =>{
-//  let timer = null;
-//  return function () {
-//    if(timer){
-//      console.log('清除计时器')
-//      clearTimeout(timer);
-//    }
-//    timer = setTimeout(fn,delay)
-//  }
-// }
 getMore=()=>{
-  // let debouncetest =  this.debounce(()=>{},1000)
   let search = window.location.search.slice(6) || 'All';
   this.setState({
     page:this.state.page+1,
     showMore:false
   },()=>{
-    // this.getData(this.state.currentIndex,this.state.page)
     this.getData(search,this.state.page)
   })
 }
 componentWillReceiveProps (nextProps) {
-  console.log('判断每次更新')
   if(nextProps.currentIndex !== this.props.currentIndex){
     this.setState({
       currentIndex:nextProps.currentIndex,
@@ -99,7 +63,6 @@ componentWillReceiveProps (nextProps) {
       loading:true
     },()=>{
       axios.get(url).then(res=>{
-        console.log('拿到的数据',res);
         if(res.success || (res.items &&res.items.length)){
           if(res.total_count>this.state.dataList.length){
             let item = res.items;

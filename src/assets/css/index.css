@@ -14,6 +14,9 @@
   display: inline-block;
   margin-left: 20px;
 }
+li a {
+  font-weight: 700;
+}
 li.active a {
   color: #1890ff;
 }
