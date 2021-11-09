@@ -31,7 +31,7 @@ componentWillReceiveProps (nextProps) {
     this.setState({
       currentIndex:nextProps.currentIndex,
       dataList:[],
-      showMore:false,
+      // showMore:false,
       isErrors:false
     },()=>{
       this.getData(nextProps.currentIndex,1,true);
