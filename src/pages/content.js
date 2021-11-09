@@ -165,7 +165,6 @@ componentWillReceiveProps (nextProps) {
               </ul>
             </div>
         </div>
-        <div className='loading'></div>
         {loading?(
           <div className='loading'></div>
           ):null}
